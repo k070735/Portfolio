@@ -1,0 +1,56 @@
+@font-face{
+	font-family: "myfont";
+	src: url('TmonMonsori.ttf.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html,body {
+    height : 100%;
+    margin: 0;
+    padding: 0;
+    overflow : hidden;
+}
+
+.main {
+    height : 100%;
+    background : white;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame {
+    height: 80%;
+    width : 85%;
+    border: 10px solid #6393A7;
+    border-radius: 10px;
+    margin : 0 auto;
+    float:left;
+}
+
+.text {
+    width: 100%;
+    text-align: center;
+    color: #6393A7;
+    font-family : 'myfont';
+}
+
+.ment {
+    padding-top: 5%;
+    font-size:150%;
+    margin: 0 auto;
+    float: left;
+}
+
+.clock {
+    padding-top: 2.5%;
+    font-weight : 600;
+    font-size: 350%;
+    margin: 0 auto;
+    float: left;
+}
+
+.corp {
+    font-size : 12px;
+}

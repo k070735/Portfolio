@@ -1,0 +1,66 @@
+/* 페이지 서식 */
+
+.whole {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.wrap {
+	margin: 0 auto;
+	width: 300px;
+	height: auto;
+	border: 2px solid lightblue;
+	border-radius: 5px;
+	border-style: dashed;
+	margin-top: 50px;
+}
+
+.wrap1 {
+	border-color: coral;
+}
+
+.wrap3 {
+	border-color: gold;
+}
+
+/*각 프로그램 제목*/
+.title {
+	font-size :  20px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/*설명 글*/
+.cf {
+	text-align: center;
+	color: gray;
+	margin-top : 10px;
+}
+
+/*결과 창*/
+#output, #output2, #output3 {
+	margin-top : 10px;
+	line-height: 30px;
+	text-align: center;
+}
+
+
+/*입력 창*/
+#input, #input1, #input2, #input3 {
+	width: 80%;
+	padding: 10px;
+	margin-top: 10px;
+	margin-left: 16px;
+}
+
+
+/*버튼 양식*/
+button {
+	display: block;
+	padding: 5px;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}

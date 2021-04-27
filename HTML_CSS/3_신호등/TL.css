@@ -1,0 +1,22 @@
+#red {
+    background: red;
+    box-shadow: 20px 20px 20px 20px #990000 inset;
+}
+#gold {
+    background: gold;
+    box-shadow: 20px 20px 20px 20px #cca300 inset;
+}
+#blue {
+    background: blue;
+    box-shadow: 20px 20px 20px 20px #000099 inset;
+}
+.light {
+    height: 20em;
+    border: 20px solid  black;
+    border-radius: 100px;
+    float: left;
+}
+h2 {
+    font-size: 75px;
+    text-align: center;
+}

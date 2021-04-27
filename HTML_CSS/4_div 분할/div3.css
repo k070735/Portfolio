@@ -1,0 +1,12 @@
+.a, .b {
+    padding: 150px;
+    line-height: 300px;
+    color: white;
+    font-size: 30px;
+}
+.a {
+    background: coral;
+}
+.b {
+    background: gold;
+}

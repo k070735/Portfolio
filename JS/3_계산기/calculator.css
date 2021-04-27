@@ -1,0 +1,42 @@
+input:focus {
+	outline: none;
+}
+
+
+table{
+	background: lightgray;
+	padding: 1px;
+}
+
+td {
+	background: white;
+	text-align: center;
+	transition : all ease 0.7s;
+}
+
+td:hover {
+	background: darkgray;
+}
+
+#screen, #resultsc {
+	border-color: transparent;
+	text-align: right;
+}
+
+.resultbt {
+	background: coral;
+	transition: all ease 0.7s;
+}
+
+.resultbt:hover {
+	background: #E45129;
+}
+
+.calculator {
+	width: 200px;
+	height: 300px;
+}
+
+.a:hover{
+	background: white;
+}

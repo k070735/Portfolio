@@ -1,0 +1,194 @@
+.background {
+    height: 900px;
+    margin: 0;
+    background: linear-gradient(to bottom,#3C3B43, #111119);
+    overflow: hidden;
+}
+/*빗방울 기본 모양*/
+.rain{
+    width: 0.5px;
+    height: 130px;
+    float: left;
+}
+
+
+/*빗방울 레이어 1,2,3*/
+.rain1 {
+    background: #73717D;
+    animation: raindrop2 1s linear infinite;
+    float: left;
+}
+@keyframes raindrop{
+    0%{
+        transform: translateY(0vh);
+        opacity: 0.1;
+    }
+    75%{
+        transform: translateY(90vh);
+        opacity: 0.7;
+    }
+    100%{
+        transform: translateY(90vh);
+        opacity: 0;
+    }
+}
+
+
+.rain2 {
+    background: #4A4851;
+    animation: raindrop 1.5s linear infinite;
+    float: left;
+}
+@keyframes raindrop2{
+    0%{
+        transform: translateY(0vh);
+        opacity: 0.1;
+    }
+    75%{
+        transform: translateY(90vh);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(90vh);
+        opacity: 0;
+    }
+}
+
+
+.rain3{
+    background: #73717D;
+    animation: raindrop3 2s linear infinite;
+    float: left;
+}
+@keyframes raindrop3{
+    0%{
+        transform: translateY(0vh);
+        opacity: 0.1;
+    }
+    80%{
+        transform: translateY(170vh);
+        opacity: 0.7;
+    }
+    100%{
+        transform: translateY(180vh);
+        opacity: 0;
+    }
+}
+
+
+
+
+/*빗방울 떨어지는 위치*/
+.r1 {
+    margin-left: 10%;
+    margin-top: -910px;
+}
+.r2 {
+    margin-left: 19%;
+    margin-top: -890px;
+}
+.r3 {
+    margin-left: 26%;
+    margin-top: -800px;
+}
+.r4 {
+    margin-left: 35%;
+    margin-top: -830px;
+}
+.r5 {
+    margin-left: 43%;
+    margin-top: -9200px;
+}
+.r6 {
+    margin-left: 55%;
+    margin-top: -900px;
+}
+.r7 {
+    margin-left: 67%;
+    margin-top: -840px;
+}
+.r8 {
+    margin-left: 73%;
+    margin-top: -890px;
+}
+.r9 {
+    margin-left: 81%;
+    margin-top: -810px;
+}
+.r10 {
+    margin-left: 90%;
+    margin-top: -900px;
+}
+
+
+.r11 {
+    margin-left: 8%;
+}
+.r12 {
+    margin-left: 18%;
+}
+.r13 {
+    margin-left: 27%;
+}
+.r14 {
+    margin-left: 39%;
+}
+.r15 {
+    margin-left: 48%;
+}
+.r16 {
+    margin-left: 59%;
+}
+.r17 {
+    margin-left: 69%;
+}
+.r18 {
+    margin-left: 79%;
+}
+.r19 {
+    margin-left: 89%;
+}
+.r20 {
+    margin-left: 97%;
+}
+
+.r21 {
+    margin-left: 5%;
+    margin-top: -1500px;
+}
+.r22 {
+    margin-left: 14%;
+    margin-top: -1400px;
+}
+.r23 {
+    margin-left: 22%;
+    margin-top: -1450px;
+}
+.r24 {
+    margin-left: 31%;
+    margin-top: -1500px;
+}
+.r25 {
+    margin-left: 42%;
+    margin-top: -1430px;
+}
+.r26 {
+    margin-left: 51%;
+    margin-top: -1500px;
+}
+.r27 {
+    margin-left: 62%;
+    margin-top: -13800px;
+}
+.r28 {
+    margin-left: 70%;
+    margin-top: -14200px;
+}
+.r29 {
+    margin-left: 83%;
+    margin-top: -1400px;
+}
+.r30 {
+    margin-left: 91%;
+    margin-top: -1500px;
+}

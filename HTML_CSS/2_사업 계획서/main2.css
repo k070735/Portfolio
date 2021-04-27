@@ -1,0 +1,28 @@
+html {
+    background: white;
+}
+h1 {
+    color: green;
+    text-align: center;
+}
+h2 {
+    padding-bottom: 10px;
+    padding-left: 30px;
+    border-bottom: 5px solid black;
+}
+.layout {
+    border: 2px solid red;
+    color: black;
+    padding-bottom: 1em;
+    margin: 1px;
+}
+.content {
+    padding-bottom: 3em;
+}
+.aa {
+    background: green;
+    color: white;
+    padding: 0.5em 0.5em 0.5em;
+    font-size: 18px;
+    border-bottom: 2px solid black;
+}

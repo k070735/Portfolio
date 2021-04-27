@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="Mainpage.css">
+        <link rel="stylesheet" href="Subpage.css">
+		<title></title>
+		<script type="text/javascript" src="Mainsite.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			
+			<!--왼쪽 사이드바-->
+			
+			<div class="leftSide">
+                
+                <!--로고-->
+				<div class="logoSpace">
+					<img class=logo src="logo3.png">
+				</div>
+                                
+                <!--검색창-->
+				<div class="search">
+					<input type="text" placeholder="검색어 입력">
+					<button>검색</button>
+				</div>
+                
+                <!--메뉴-->
+				<div class="menuList">
+					<ul class="leftMenu">
+
+						<li onclick="home()"><span>Home</span></li>
+						<li onclick="notice(); noticeData()"><span>공지사항</span>
+							<ul class="submenu">
+								<li onclick="rule(); ruleData()"><span>서버 법전</span></li>
+								<li><span>공지 게시판</span></li>
+								<li><span>실시간 서버상태</span></li>
+							</ul>
+						</li>
+						<li onclick="update(); updateData()"><span>업데이트</span></li>
+						<li><span>커뮤니티</span>
+							<ul class="submenu">
+								<li><span>유저 게시판</span></li>
+								<li><span>유저 상점</span></li>
+								<li><span>유저 작품</span></li>
+							</ul>
+						</li>
+						<li><span>건의사항</span>
+							<ul class="submenu">
+								<li><span>요청사항</span></li>
+								<li><span>버그제보</span></li>
+								<li><span>Q&A</span></li>
+							</ul>
+						</li>  
+					</ul>
+				</div>
+
+			</div>
+			
+			<!--기타 공간들-->
+			
+			<div class="leftSpace"></div>
+			
+						
+			<!--메인화면-->
+			
+            <!--상단바-->
+			<div class="topBar">
+                <!--로고-->
+				<img class=logo src="logo3.png">
+                <!--메뉴버튼-->
+				<img onmousemove="menuDrop()" onmouseout="menuDropNo()" class=menuIcon src="menuicon.png">
+                <!--로그인버튼-->
+				<div class="topbar_loginBt">
+						<input onclick="login()" type="button" value="Log in">
+				</div>
+                <!--접속자수-->
+				<div class="topbar_screenPeopleWrap">
+					<div class="topbar_screenPeople">
+						<div class="topbar_font">
+							<div class="topbar_peopleTitle">현재 접속자 수 :</div><div class="topbar_peopleNum"> 927명</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            
+			<!--상단바 hover 메뉴리스트-->
+			<div class="topbar_menuList">
+				<ul class="leftMenu">
+					<li><span>Home</span></li>
+					<li><span>공지사항</span>
+						<ul class="submenu">
+							<li><span>서버 규칙</span></li>
+							<li><span>공지 게시판</span></li>
+							<li><span>실시간 서버상태</span></li>
+							</ul>
+					</li>
+					<li><span>업데이트</span></li>
+					<li><span>커뮤니티</span>
+						<ul class="submenu">
+							<li><span>유저 게시판</span></li>
+							<li><span>유저 상점</span></li>
+							<li><span>유저 작품</span></li>
+						</ul>
+					</li>
+					<li><span>건의사항</span>
+						<ul class="submenu">
+							<li><span>요청사항</span></li>
+							<li><span>버그제보</span></li>
+							<li><span>Q&A</span></li>
+						</ul>
+					</li>   
+				</ul>
+			</div>
+			
+			<div class="main">
+
+				<!--사진 슬라이드-->
+				<div class="mainScreen">
+					<div class="photoSlide">
+						<p><img src="mainphoto.PNG"></p>
+					</div>
+				</div>
+				
+				<!--게시판-->
+				<div class="lists">
+					<div class="board boardWrap1">
+						<ul class="noticeBoard"><div> - 공지사항 -</div>
+							<li><span>19.01.01. [공지] 공지사항 1</span></li>
+							<li><span>19.01.01. [공지] 공지사항 2</span></li>
+							<li><span>19.01.01. [공지] 공지사항 3</span></li>
+							<li><span>19.01.01. [공지] 공지사항 4 </span></li>
+							<li><span>19.01.01. [공지] 공지사항 5</span></li>   
+						</ul>
+					</div>
+					<div class="board">
+						<ul class="noticeBoard"><div> - 업데이트 -</div>
+							<li><span>19.01.01. 유리 반블럭 추가</span></li>
+							<li><span>19.01.01. 탱크 , 수류탄 등 무기 추가</span></li>
+							<li><span>19.01.01. 캥거루 추가, 사람 안 들어오는 버그 수정</span></li>
+							<li><span>19.01.01. 아이즈원 갑옷 거치대 추가, 이채연 현수막 추가</span></li>
+							<li><span>19.01.01. 물고기 종류 줄돔 추가</span></li>   
+						</ul>
+					</div>
+					<div class="board">
+						<ul class="noticeBoard"><div> - 커뮤니티 -</div>
+							<li><span>여러분들은 회 좋아하시나요? 전 좋아합니다</span></li>
+							<li><span>테러 신고요 범인 : Physics</span></li>
+							<li><span>관리자님 소고기 사주세요 배고파요</span></li>
+							<li><span>피직섭을 한다면 아이즈원 피에스타는 듣고 와야 한다는 게 정계의 학설 </span></li>
+							<li><span>제발 그만들좀 하세요!</span></li>   
+						</ul>
+					</div>
+				</div>
+                
+                <!--공지사항-->
+                <div class="noticeWrap">
+                        <div class="noticeTitle">공지사항</div>
+                        <div class="noticeIntro">서버의 공지사항 및 필독사항을 안내해드립니다!</div>
+                        <div class="NoticeBoardWrap">
+                            <table class="noticeTable">
+
+                                <thead>
+                                <tr class="centerAlign">
+                                    <td>번호</td>
+                                    <td>제목</td>
+                                    <td>날짜</td>
+                                    <td>조회수</td>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td onclick="detailPage()"></td>
+                                    <td></td>
+                                    <td>10004</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td onclick="detailPage()"></td>
+                                    <td></td>
+                                    <td>10004</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td onclick="detailPage()"></td>
+                                    <td></td>
+                                    <td>10004</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="pageBt">
+                                <ul>  
+                                    <li><a href="#">1</a></li>  
+                                    <li><a href="#">2</a></li>  
+                                    <li><a href="#">3</a></li>  
+                                    <li><a href="#">4</a></li>  
+                                    <li><a href="#">5</a></li>  
+                                    <li><a href="#">6</a></li>  
+                                    <li><a href="#">7</a></li>  
+                                    <li><a href="#">8</a></li>  
+                                    <li><a href="#">9</a></li>  
+                                    <li><a href="#">10</a></li>  
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+				
+                <!--상세페이지-->
+                <div class="detailPage">
+                    
+                    <div class="detailTitle">[공지] 배고프다 내일 점심은 포테이토 피자였으면</div>
+                    
+                    <div class="articleInfo">
+                        <span class="writeDate">2020.03.07</span>
+                        <span>조회수</span><span class="view">10004</span>
+                    </div>
+                    
+                    <div class="articleContent">
+                        진짜 제가 너무 배가고픈데요 내일 점심이 포테이토 피자였으면 좋겠어요ㅠㅠ<br>여러분들도 그렇게 생각하시나요?
+                    </div>
+                    <div class="prevNextBt">
+                        <input type="button" class="prevBt" value="< 이전 글">
+                        <h><input type="button" class="listBt" value="목록"></h>
+                        <input type="button" class="nextBt" value="다음 글 >">
+                    </div>
+                    <!--댓글창
+                    <div class="comments">
+                        
+                        <div class="commentsWrite">
+                            <div class="comment">
+                                <div class="commentWriteTitle">댓글 쓰기</div>
+                                <input type="text" class="commentWrite">
+                                <input type="button" class="commentSend" value="작성">
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="commentInfo">
+                            <span class="commentTitle">댓글</span><span class="commentNum">(1)</span>
+                        </div>
+                        
+                        <div class="comment">
+                            <span class="commentWriter">Lamon_</span>
+                            <span class="commentWriteDate">2020.03.07.</span>
+                            <div class="commentContents">
+                                우와 대단해요~ 저도 배고픈데~
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                </div>
+                
+                <!--업데이트-->
+                <div class="updateWrap">
+                    <div class="noticeTitle">서버 업데이트 사항</div>
+                    <div class="noticeIntro">서버에 새롭게 업데이트 된 사항을 안내해드립니다!</div>
+                    <div class="updateBoardWrap">
+                        <div class="balloon">
+                            <img src="physics.png">
+                            <div class="updateInfo">
+                                <span class="updateDate"></span>
+                                <div class="updateDateInfo">업데이트 내용</div>
+                            </div>
+                            <div class="updateContent">
+                            </div>
+                        </div>
+                        <div class="balloon">
+                            <img src="physics.png">
+                            <div class="updateInfo">
+                                <span class="updateDate"></span>
+                                <div class="updateDateInfo">업데이트 내용</div>
+                            </div>
+                            <div class="updateContent">
+                            </div>
+                        </div><div class="balloon">
+                            <img src="physics.png">
+                            <div class="updateInfo">
+                                <span class="updateDate"></span>
+                                <div class="updateDateInfo">업데이트 내용</div>
+                            </div>
+                            <div class="updateContent">
+                            </div>
+                        </div>
+                        <p class="morebt"><img src="morebt.png"></p>
+
+                      </div>
+                 </div>
+                
+                <!--서버 법전-->
+                <div class="ruleWrap">
+                    <div class="ruleTitle">서버 법전</div>
+                    <div class="ruleIntro">모두가 행복한 서버를 위해 꼭 지켜주세요.</div>
+                    <div class="ruleContents">
+                        <ul class="ruleList">
+                            <li><span class="ruleNum"></span><span onmouseover="ruleDetail()" onmouseout="ruleDetailOut()" class="ruleContent"></span><div class="rulePunish"></div><div class="ruleDetail">자동 사탕수수 캐기, 자동 벌목기 같은 자동화 회로와 몹 타워는 렉 유발 등의 사유로 인해 서버 내에서 금지하고 있습니다. 적발 시 1회 경고, 경고 3회 누적 시 영구 밴 처리 당할 수 있습니다.</div>
+                            </li>
+                            <li><span class="ruleNum"></span><span class="ruleContent"></span><div class="rulePunish"></div>
+                            </li>
+                            <li><span class="ruleNum"></span><span class="ruleContent"></span><div class="rulePunish"></div>
+                            </li>
+                            <li><span class="ruleNum"></span><span class="ruleContent"></span><div class="rulePunish"></div>
+                            </li>
+                            <li><span class="ruleNum"></span><span class="ruleContent"></span><div class="rulePunish"></div>
+                            </li>
+                            <li><span class="ruleNum"></span><span class="ruleContent"></span><div class="rulePunish"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+				<!--footer-->
+				<footer>
+					<p><a href="#">top</a></p>
+					<p><a href="#">About us</a>
+						<a href="#">Q&A</a>
+						<a href="#">Site Map</a>
+					</p>
+					<p class="copyright">Copyright © 2020 Lamon.co.,Ltd. All rights reserved.</p>
+    				<p class="info">Contact webmaster for more information. 010-0927-0529</p>
+				</footer>
+                
+			</div>
+			
+			<div class="otherspace"></div>
+			
+		
+			<!--오른쪽 사이드바-->
+			<div class="rightSide">
+                <!--로그인 버튼-->
+				<div class="loginBt">
+					<input onclick="login()" type="button" value="Log in">
+				</div>
+                <!--유저 정보-->
+				<div class="login">
+					<div class="profile">
+						<p><img src="physics.png"></p>
+						<table class="profileInfo">
+							<tr>
+								<td>아이디 </td>
+								<td>Physics7</td>
+							</tr>
+							<tr>
+								<td>닉네임 </td>
+								<td>물리학도</td>
+							</tr>
+							<tr>
+								<td>칭호 </td>
+								<td>X</td>
+							</tr>
+						</table>
+
+					</div>
+				</div>
+                <!--접속자 수-->
+				<div class="rs_screenPeopleWrap">
+					<div class="rs_screenPeople">
+						<div class="rs_peopleTitle">현재 접속자 수 :</div><div class="rs_peopleNum">927명</div>
+						<div></div>
+					</div>
+				</div>
+                <!--업적달성-->
+				<div class="screenAchieve">
+					<div> 업적 달성 및 칭호 획득 현황</div>
+					<ul class="achieveTitle">
+						<li class="listspace"><span class="username">Physics님</span><br><span class="achieve">-지배자 칭호 획득!</span></li>
+						<li class="listspace"><span class="username">OSH님</span><br><span class="achieve">-관리자 칭호 획득!</span></li>
+						<li class="listspace"><span class="username">Lamon님</span><br><span class="achieve">-졸린 칭호 획득!</span></li>
+						<li class="listspace"><span class="username">Jigu님</span><br><span class="achieve">-OSU 장인 칭호 획득!</span></li>
+						<li><span class="username">Naba님</span><br><span class="achieve">-Go in water 칭호 획득!</span></li>   
+					</ul>
+				</div>
+
+			</div>
+            
+            <!--로그인페이지-->
+            <div class="loginWrap">
+                <div class="loginPage">
+                    <div class="form">
+                        <div class="logoSpace">
+                            <img src="logo3.png">
+                        </div>
+                        <form class="login-form">
+                            <input type="text" placeholder="Minecraft ID"/>
+                            <input type="password" placeholder="Minecraft password"/>
+                            <button>login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+		</div>
+        
+        
+	</body>
+</html>
+
+

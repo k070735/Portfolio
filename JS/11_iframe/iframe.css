@@ -1,0 +1,40 @@
+/*프레임*/
+iframe {
+	height: 80vh;
+	float: left;
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 1%;
+}
+
+
+/*버튼*/
+#changebt {
+	margin-top: 30px;
+	margin-left: 48%;
+	float: left;
+    background-color: darkolivegreen;
+    border: none;
+    color:#fff;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+	border-radius: 10px;
+}
+
+/*타이틀*/
+.title {
+	font-size: 30px;
+	color: darkolivegreen;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+.body {
+	width: 100%;
+	height: 100%;
+}

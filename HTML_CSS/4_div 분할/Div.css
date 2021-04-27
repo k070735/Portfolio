@@ -1,0 +1,42 @@
+.content  {
+    float:left;
+}
+
+/*기본 폰트*/
+.tile {
+    color: white;
+    font-size: 40px;
+    padding: 10px;
+}
+
+.sth {
+    border: 1px solid black;
+}
+
+
+/* 칸 별 지정*/
+#first {
+    width: 350px;
+    height: 300px;
+    background: #ff6600;
+}
+#another {
+    width: 350px;
+    height: 500px;
+    background: #33ccff;
+}
+#Another {
+    width: 700px;
+    height: 700px;
+    background: gold;
+}
+#forth {
+    width: 530px;
+    height: 100px;
+    background: #003399;
+}
+#last {
+    width: 140px;
+    height: 100px;
+    background: #00cc00;
+}

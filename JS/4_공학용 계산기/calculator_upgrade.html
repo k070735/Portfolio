@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="calculator_upgrade.css">
+		<title>Calculator</title>
+		<script type="text/javascript" src="calculator_upgrade.js"></script>
+	</head>
+    <body>
+		<table class="calculator">
+			<tr> 
+				<td class="a" colspan="5">
+					<input type="text" id="screen">
+				</td>
+            </tr>
+         	<tr>
+          	    <td class="a" colspan="5">
+					<input type="text" id="resultsc"></td>
+            </tr>
+         	<tr>
+          	    <td colspan="3" onclick="ac()">AC</td>
+				<td onclick="writenum('/')">/</td>
+				<td class="tile" onclick="tan()">tan</td>
+            </tr>
+         	<tr>
+          	    <td onclick="writenum(7)">7</td>
+				<td onclick="writenum(8)">8</td>
+				<td onclick="writenum(9)">9</td>
+				<td onclick="writenum('*')">x</td>
+				<td onclick="sin()">sin</td>
+            </tr>
+         	<tr>
+          	    <td onclick="writenum(4)">4</td>
+				<td onclick="writenum(5)">5</td>
+				<td onclick="writenum(6)">6</td>
+				<td onclick="writenum('+')">+</td>
+				<td class="tile" onclick="cos()">cos</td>
+            </tr>
+         	<tr>
+          	    <td onclick="writenum(1)">1</td>
+				<td onclick="writenum(2)">2</td>
+				<td onclick="writenum(3)">3</td>
+				<td onclick="writenum('-')">-</td>
+				<td class="tile" onclick="squared()">x^2</td>
+            </tr>
+         	<tr>
+          	    <td onclick="writenum(0)" colspan="3">0</td>
+				<td onclick="writenum('.')">.</td>
+				<td class="resultbt" onclick="result()">=</td>
+            </tr>
+			
+        </table>
+
+    </body>
+</html>

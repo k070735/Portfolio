@@ -1,0 +1,167 @@
+/*서식*/
+@font-face {
+    font-family: hello;
+    src : url(moris.ttf)
+}
+.wrap {
+    width: 1000px;
+    height: 650px;
+    border: 2px solid black;
+    margin-top: 100px;
+}
+
+.left_side {
+    height: 650px;
+    width: 202px;
+    border-right: 2px solid black;
+    float: left;
+}
+
+.right_center{
+    height: 650px;
+    width: 796px;
+    float: left;
+}
+
+
+/*로고*/
+
+.logo {
+    width: inherit;
+    height: 100px;
+    border-bottom: 2px solid black;
+    border-bottom-style: dotted;
+    font-size: 25px;
+    text-align: center;
+    line-height: 100px;
+    font-family: Font;
+}
+
+
+
+/*왼쪽 메뉴 바*/
+
+
+/*1. 틀 */
+.under_logo { 
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-top: 20px;
+}
+
+/*2. 메뉴 바 디자인*/
+.menu_bar{
+    border: 2px solid black;
+    margin-right: 13px;
+}
+
+.menu123 {
+    border-bottom: 2px solid black;
+}
+
+/*3.리스트 스타일*/
+ul, li {
+    list-style: none;
+}
+
+.mainmenu, .submenu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*4. 메인메뉴 sub메뉴 디자인*/
+.mainmenu>li{
+    padding: 10px;
+    width: 150px;
+    transition: all ease 0.3s;
+}
+
+.submenu{
+    width: 170px;
+    display: none;
+    margin-bottom: -10px;
+    margin-left: -10px;
+}
+
+.submenu>li{
+    padding: 10px;
+    transition: all ease 0.1s;
+}
+
+/*마우스 대면 색 바꾸기*/
+.mainmenu>li:hover {
+    color: snow;
+    background: gray;
+}
+
+/*마우스 대면 sub menu리스트 펼치기*/
+.menu_bar ul li:hover ul {
+    display: block;
+}
+
+/*마우스 대면 submenu색 바꾸기*/
+.submenu>li:hover {
+    color: gray;
+    background: snow;
+}
+
+
+
+
+
+/*이미지 칸*/
+.img_slide {
+    width: 100%;
+    height: 344px;
+    border-bottom: 2px solid black;
+    font-size: 40px;
+    text-align: center;
+    line-height: 344px;
+    font-family: Font;
+}
+
+
+/*중간 메뉴바*/
+.notice, .gallery, .shortcut {
+    width: 33%;
+    height: 200px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 200px;
+    float: left;
+}
+
+.notice, .gallery {
+    border-right: 2px solid black;
+    border-right-style: dotted;
+}
+
+/*하단 바*/
+.copyright {
+    width: 600px;
+    float: left;
+    font-size: 25px;
+    text-align: center;
+    line-height: 100px;
+    border-top: 2px solid black;
+}
+
+.etc {
+    float: left;
+    border-left: 2px solid black;
+    border-left-style: dotted;
+}
+.sns, .f_site {
+    height: 50px;
+    width: 194px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+}
+.sns {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-bottom-style: dotted;
+}
+

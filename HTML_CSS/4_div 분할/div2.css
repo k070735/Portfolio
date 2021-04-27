@@ -1,0 +1,83 @@
+#first {
+    width: 190px;
+    height: 190px;
+    background: gold;
+    padding: 10px;
+    font-size: 20px;
+    float: left;
+}
+
+#Another {
+    width: 190px;
+    height: 190px;
+    background: coral;
+    padding: 10px;
+    font-size: 20px;
+    float: left;
+}
+
+#other {
+    width: 400px;
+    height: 400px;
+    background: lightblue;
+    padding: 10px;
+    font-size: 20px;
+}
+.wrap {
+    width: 420px;
+    height: 210px;
+}
+.alwrap {
+    width: 420px;
+    height: 610px;
+    float: left;
+}
+.tile {
+    width: 900px;
+    height: 900px;
+}
+#last {
+    height: 610px;
+    width: 210px;
+    float: left;
+}
+#lastOne {
+    width: 190px;
+    height: 295px;
+    padding: 10px;
+    font-size: 20px;
+    background: lightgreen;
+}
+
+#lastTwo {
+    width: 190px;
+    height: 295px;
+    padding: 10px;
+    font-size: 20px;
+    background: lavender;
+}
+
+
+.wlslast{
+    width: 630px;
+    height: 200px;
+    border: 1px solid black;
+    float: left;
+}
+
+#lastThree {
+    width: 295px;
+    height: 190px;
+    padding: 10px;
+    font-size: 20px;
+    background: orange;
+    float: left;
+}
+#lastFour{
+    width: 295px;
+    height: 190px;
+    padding: 10px;
+    font-size: 20px;
+    background: green;
+    float: left;
+}

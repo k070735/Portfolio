@@ -1,0 +1,164 @@
+/*헤더*/
+header {
+    background: #3B3C46;
+    height: 60px;
+}
+.head {
+    width: 1000px; margin: 0 auto;
+    text-align: center;
+}
+/*1.album 글씨*/
+h2 {
+    color: white;
+    float: left;
+    font-size: 20px;
+    vertical-align: middle;
+    font-weight: normal;
+}
+/*2.메뉴 버튼*/
+.menubt {
+    color: white;
+    font-size: 15px;
+    background: #3B3C46;
+    float: right;
+    padding: 19px;
+    border: 0.5px solid lightgray;
+    margin-top: 2px;
+}
+
+
+
+/*본문(탑) 설정*/
+
+.body {
+    width: 100%;
+    text-align: center;
+}
+.topOuter {
+    text-align: center;
+    width: 50%;
+    padding-left: 25%;
+}
+.top {
+    display: inline-block;
+    height: 350px;
+    padding-top:3em;
+}
+
+
+
+/*1.본문 중앙 글씨들*/
+h1, p {
+    text-align: center;
+    color: black
+}
+h1{
+    font-size: 2em;
+    margin-top: 1.2em;
+}
+p {
+    margin-bottom: 2em;
+    line-height: 1.7em;
+}
+
+
+/*2.start&show버튼*/
+.bluebt {background: #2B7AFA;}
+
+.graybt {background: gray;}
+
+.BGbt {
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    border:0px;
+    font-size: 15px;
+    color: white;
+}
+
+
+
+/*본문(바텀)*/
+.bottom {
+    display: inline-block;
+    background: linear-gradient(to bottom,lightgray,white);
+    width: 100%;
+    height: 600px;
+}
+.bt1 {
+    width:1000px;
+    margin: 0 auto;
+}
+
+
+/*앨범 썸네일 창*/
+
+/*1.타일 묶기*/
+.tile {
+    height: 800px;
+    width:300px;
+    float: left;
+    margin-right:2em; margin-top: 2em;
+}
+
+/*2.thumbnail*/
+.thumbnail {
+    background: #3B3C46;
+    color: white;
+    font-size: 30px;
+    width: 320px;
+    height: 150px;
+    padding-top:120px;
+    text-align: center;
+}
+
+/*3.글 부분*/
+.content {
+    height: 100px;
+    width: 300px;
+    background: white;
+    float: left;
+    padding: 10px 10px 20px 10px;
+    text-align: left;
+}
+
+/*4.버튼*/
+.buttons {
+    margin-top:10px;
+}
+.Yes{ 
+    margin-right:-1px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0px;
+} 
+.No{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: rgba(0,0,0,0);
+}
+/*Yes&No 공통 부분*/
+.YNbt{
+    float:left;
+    border: 1px solid lightgray;
+    padding: 2px 5px 2px 5px;
+    background: rgba(0,0,0,0);
+    color: gray;
+}
+
+/*5.likes*/
+h4 {
+    font-weight: 300;
+    text-align: right;
+}
+
+
+
+/*Footer*/
+footer {
+    color: white;
+    padding: 40px;
+}
+/*copyright*/
+p{font-weight: normal;
+    text-align: center;
+    color: lightslategray}

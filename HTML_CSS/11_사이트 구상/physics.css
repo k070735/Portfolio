@@ -1,0 +1,181 @@
+@font-face{
+	font-family:"font";
+	src: url("NanumSquareRoundR.ttf");
+}
+
+h4 {
+	font-size: 20px;
+	font-weight: 100;
+}
+
+/*틀 잡기*/
+header {
+    background: #2F2F30;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    min-height: 100%;
+}
+.top {
+    width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+    background: white;
+    margin-top: 10px;
+}
+
+.bottom {
+    width: 70%;
+    height: 1000px;
+    margin: 0 auto;
+    background: white;
+}
+
+footer {
+    background: linear-gradient(to bottom,white,#2F2F30);;
+    height: 300px;
+}
+
+
+/*상단 바*/
+.menu_bar {
+    float: left;
+}
+
+.logo {
+    width: 15%;
+    height: 80px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 80px;
+    border-right: 1px solid black;
+    border-right-style: dashed;
+    border-right-color: #2F2F30;
+    float: left;
+    color: #2F2F30;
+}
+
+/*메뉴바*/
+.mainmenu, .menus, .submenu {
+    list-style: none;
+}
+
+.menu_bar {
+    width: 40%;
+    height: 40px;
+    margin-top: 25px; /*메뉴바 안에서 메뉴들 수직정렬*/
+}
+
+.smallmenu {
+	margin: 0;
+	transition: all ease 1s;
+}
+
+.menus {
+    float: left;
+    margin-top: -10px;
+    width: 25%;
+}
+
+a {
+    text-decoration: none; color:#000000;
+}
+
+
+/*마우스 대면 색 바꾸기*/
+.mainmenu>li:hover {
+    color: darkolivegreen;
+    background: snow;
+}
+
+/*마우스 대면 sub menu리스트 펼치기*/
+.submenu {
+    display: none;
+}
+
+.menu_bar ul li:hover ul {
+    display: block;
+}
+
+/*마우스 대면 submenu색 바꾸기*/
+.submenu>li:hover {
+    color: darkolivegreen;
+    background: gray;
+}
+
+/*로그인 버튼*/
+.login {
+    width: 15%;
+    height: 80px;
+    float: right;
+    border-left: 1px solid black;
+	border-left-style: dashed;
+    margin: 0 auto;
+}
+
+.loginbt {  /*http://blog.naver.com/PostView.nhn?blogId=tkftjddla&logNo=50107844998*/
+    font-size: 20px;
+    background: #2F2F30;
+    padding: 10px 20px;
+    margin-left: 35px;
+    border-radius: 5px;
+    line-height: 80px;
+	color: white;
+}
+
+
+
+
+/*main*/
+.main{
+    background: #2F2F30;
+    border: 1px solid transparent;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-top: -50px;
+    color: white;
+    font-size: 65px;
+    line-height: 90px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+
+.pasteip{
+    background: white;
+    padding: 10px;
+    font-size: 20px;
+    margin-left: 125px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+/*바텀*/
+
+.sector {
+    width: 100%;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    margin-top: 100px;
+    height: 600px;
+    border-bottom: 1px solid black;
+    border-bottom-style: dashed;
+}
+
+.title {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    color: black;
+}

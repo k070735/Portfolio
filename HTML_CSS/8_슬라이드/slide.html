@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <link rel="stylesheet" href="slide.css">
+        <title>Slide</title>
+    </head>
+    
+    <body>
+        <div class="wrap">     <!--큰 틀-->
+            <div class="center">     <!--중심잡기-->
+                
+                <!--radio 버튼 사용 ->> label로 연결(id)-->
+                <input type="radio" id="b1" name="radiobt" checked/>  <!--로딩 시 체크-->
+                <input type="radio" id="b2" name="radiobt" />
+                
+                <div class="frame">     <!--슬라이드 화 틀 잡기-->
+                    <!--리스트로 화면 돌리기-->
+                    <ul>
+                        <li><h1>Don't Worry</h1></li>
+                        <li><h1>Be happy</h1></li>
+                    </ul>
+                </div>
+                
+                <!--label로 버튼 링크-->
+                <div class="radiobt">
+                    <label for="b1"></label>
+                    <label for="b2"></label>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

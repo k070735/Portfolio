@@ -1,0 +1,602 @@
+
+/*공지사항 페이지*/
+
+.noticeWrap {
+    display: none;
+    margin-bottom: 100px;
+}
+
+/*제목*/
+.noticeTitle {
+	margin: 0 auto;
+    margin: 3% 7.5% 1% 7.5%;
+    font-size: 30px;
+	font-family: 'myfont';
+	font-weight: bold;
+	color:#5F4C83;
+}
+
+.noticeIntro {
+	margin: 0 auto;
+    margin: 0.5% 7.5% 5% 7.5%;
+    font-size: 20px;
+	font-family: 'myfont';
+	color: #8276AA;
+}
+
+/*표 서식*/
+.noticeTable {
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-family: "myfont";
+    width: 90%;
+}
+
+.centerAlign {
+    text-align: center;
+    border-top : 1px solid #F0EDF2;
+}
+
+.centerAlign>td:nth-child(1) {
+    width: 50px;
+}
+
+.noticeTable>tbody>tr>td:nth-child(1), .noticeTable>tbody>tr>td:nth-child(4) {
+    text-align: center;
+}
+
+.noticeTable>thead>tr>td, .noticeTable>tbody>tr>td {
+    border-bottom: 1px solid #F0EDF2;
+    padding: 20px;
+}
+
+.noticeTable>thead>tr>td:nth-child(3) {
+    width: 115px;
+}
+
+.centerAlign>td {
+    color: #8276AA;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.noticeTable>tbody>tr {
+    transition: all ease 0.3s;
+}
+
+.noticeTable>tbody>tr>td {
+    font-size: 19px;
+}
+
+
+/*리스트 hover 시 배경 바꾸기*/
+.noticeTable>tbody>tr:hover {
+    background: #F1EDF5;
+}
+
+/*hover시 제목 서식*/
+.noticeTable>tbody>tr>td:nth-child(2):hover {
+    text-decoration: underline;
+    color: orangered;
+    cursor: pointer;
+}
+
+
+/*페이지 버튼*/
+.pageBt {
+    height: 50px;
+    width: 330px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.pageBt>ul {
+	float:left;
+	display:inline;
+}
+
+.pageBt>ul>li {
+	float:left;
+}
+
+.pageBt>ul>li>a {
+	float:left;
+	padding:4px;
+	margin-right:3px;
+	width:20px;
+	color:#000;
+	font:17px tahoma;
+	text-align:center;
+	text-decoration:none;
+}
+
+.pageBt>ul>li>a:hover, .pageBt>ul>li>a:focus {
+    border-radius: 50%;
+	border: 3px solid #DBCEE3;
+}
+
+
+
+/*상세페이지*/
+.detailPage {
+    display: none;
+    width: 85%;
+    margin: 0 auto;
+    font-family: "myfont"
+}
+
+/*작성자 정보*/
+
+.articleInfo>span {
+    margin-right: 10px;
+}
+
+.view {
+    margin-left: -5px;
+}
+
+.writerName, .writeDate, .view {
+    font-weight: bold;
+}
+
+.detailTitle {
+    font-size: 35px;
+    font-weight: bold;
+    color: #5F4C83;
+}
+
+.articleInfo {
+    margin-top : 10px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #DBCEE3;
+    border-bottom-style: dotted;
+}
+
+/*글 내용*/
+
+.articleContent {
+    padding-top: 200px; padding-bottom: 200px;
+    line-height: 30px;
+    font-size: 20px;
+    border-bottom: 1px solid #DBCEE3;
+    border-bottom-style: dotted;
+    margin-bottom: 50px;
+}
+
+/*이전 다음 버튼*/
+.prevNextBt {
+    margin-bottom: 150px;
+    
+}
+
+.prevBt, .nextBt {
+    font-family: "myfont";
+	font-size: 17px;
+	width: 90px;
+	height: 50px;
+	padding-top: 5px;
+	border:0px;
+	outline: none;
+	cursor: pointer;
+	border-radius: 5px;
+	color: snow;
+	background:#5F4C83;
+	transition: all ease .5s;
+}
+
+.nextBt{
+    float: right;
+}
+
+.listBt{
+    font-family: "myfont";
+	font-size: 19px;
+	width: 90px;
+	height: 50px;
+	padding-top: 5px;
+	border:0px;
+	outline: none;
+	cursor: pointer;
+	border-radius: 5px;
+	color: #5F4C83;
+    background: transparent;
+	transition: all ease .5s;
+    margin-left: 33.5%;
+}
+
+
+.prevBt:hover, .nextBt:hover {
+	background: #8276AA;
+}
+
+.listBt:hover {
+    text-decoration: underline;
+    text-decoration-color: #5F4C83;
+}
+
+
+
+
+/*댓글창*/
+
+.commentInfo {
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 1px solid #DBCEE3;
+    border-radius: 10px;
+    border-style:dashed;
+    width: 63px;
+}
+
+.commentWriter {
+    font-weight: bold;
+}
+
+.commentWriteDate {
+    padding-left: 20px;
+    font-size: 17px;
+}
+
+.commentContents {
+    padding: 20px 10px;
+}
+
+/*댓글 작성 창*/
+
+.commentsWrite {
+    margin-bottom: 50px;
+}
+
+.commentWrite {
+    width: 100%;
+    height: 50px;
+    margin: 10px 0px;
+    border: 1px solid #E6E6E6;
+    border-radius: 5px;
+}
+
+.commentWrite:focus {
+    outline:none;
+}
+
+.commentSend {
+    float: right;
+}
+
+/*댓글 버튼*/
+
+.commentSend {
+    font-family: "myfont";
+	font-size: 17px;
+	width: 60px;
+	height: 30px;
+	padding: 7px;
+    margin-right: -2px;
+	border:0px;
+	outline: none;
+	cursor: pointer;
+	border-radius: 5px;
+	color: snow;
+	background:#5F4C83;
+	transition: all ease .5s;
+}
+
+.commentSend:hover {
+	background: #8276AA;
+}
+
+
+
+
+
+
+/*업데이트 창*/
+
+.updateWrap{
+    display: none;
+    font-family: "myfont";
+}
+
+/*말풍선*/
+
+.balloon {
+    position:relative;
+    padding:30px;
+    width:80%; 
+    height:220px;
+    border: 5px solid #E5DCED;
+    margin: 0 auto;
+    background:transparent;
+    border-radius:10px;
+    margin-bottom: 70px;
+}
+
+.balloon:before {
+  content:"";
+  position:absolute;
+  bottom:-20px;
+  left:40px;
+  border-width:20px 20px 0;
+  border-style:solid;
+  border-color : #E5DCED transparent;
+  display:block;
+  width:0;
+}
+
+.balloon:after {
+  content:"";
+  position:absolute;
+  bottom:-13px;
+  left:47px;
+  border-width:13px 13px 0;
+  border-style:solid;
+  border-color:#fff transparent;
+  display:block;
+  width:0;
+}
+
+/*말풍선 프로필 이미지*/
+
+.balloon>img {
+	width: 60px;
+	height: 60px;  
+	border-radius: 100px;
+	border: 3px solid #B9B8E5;
+	margin: 0 auto;
+    float: left;
+}
+
+/*업데이트 날짜 및 정보*/
+
+.updateDate {
+    margin-left: 20px;
+    font-size:20px;
+    font-weight: bold;
+}
+
+.updateInfo {
+    width: 500px;
+    float: left;
+    margin-top : 8px;
+}
+
+.updateDateInfo {
+    margin-top: 10px;
+    margin-left: 18px;
+}
+
+/*업데이트 내용*/
+
+.updateContent {
+    position: absolute;
+    margin-top: 100px;
+    line-height: 50px;
+}
+
+/*더보기 버튼*/
+
+.morebt {
+    text-align: center;
+    margin: 10% 0%;
+}
+
+.morebt>img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+
+
+
+/*서버 법전*/
+
+.ruleWrap {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    text-align: center;
+    font-family: "myfont";
+    display: none;
+}
+
+.ruleTitle {
+    font-size: 30px;
+	font-family: 'myfont';
+	font-weight: bold;
+	color:#5F4C83;
+    display: inline-block;
+	margin-top: 3%;
+}
+
+.ruleIntro {
+	margin: 0 auto;
+    margin-top: 2%;
+    font-size: 20px;
+	font-family: 'myfont';
+	color: #8276AA;
+}
+
+.ruleContents {
+    border: 1px solid transparent;
+    border-style: double;
+    border-radius: 20px;
+    margin-top: 50px;
+    box-shadow: 10px 10px 10px 10px #E2DAE8;
+}
+
+.ruleList {
+    margin-top: 10%;
+}
+
+.rulePunish {
+    margin-top : 10px;
+    color: darkgray;
+}
+
+.ruleList>li {
+    margin: 70px;
+    cursor: pointer;
+}
+
+.ruleContent {
+    margin-left: 10px;
+}
+
+.ruleDetail {
+    margin-top : 30px;
+    margin-bottom: 30px;
+    border: 1px solid #5F4C83;
+    border-radius: 20px;
+    border-style: dashed;
+    color: #5F4C83;
+    padding: 30px;
+    line-height: 30px;
+}
+
+
+
+
+/*로그인 팝업 창*/
+
+.loginWrap {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	display : none;
+	background: rgba(0,0,0,0.6);
+	z-index: 10;
+}
+
+.form>.logoSpace>img {
+	width: 80%;
+	margin-bottom: 45px;
+}
+
+.loginPage {
+  	width: 360px;
+  	padding: 8% 0 0;
+  	margin: auto;
+}
+
+.form {
+	position: relative;
+	height: 400px;
+	z-index: 10;
+	background: #FFFFFF;
+	max-width: 360px;
+	margin: 0 auto 100px;
+	padding: 45px;
+	text-align: center;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input {
+	font-family: "Roboto", sans-serif;
+  	outline: 0;
+	background: #f2f2f2;
+	width: 100%;
+  	border: 0;
+  	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #8276AA;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.form button:hover {
+	background:#5F4C83;
+}
+
+
+
+/*특정 크기 이하 > 오른쪽 사이드 바 없애고 상단바 만들기*/
+@media (max-width: 1503px) {
+	.rightSide {
+		display: none;
+	}
+	.topBar {
+		display: block;
+	}
+	.main {
+		width: 73%;
+		right: 0px;
+		margin-top: 10%;
+	}
+	.mainScreen {
+		margin-bottom: 5%;
+	}
+	.leftSpace, .main {
+		float: left;
+	}
+}
+
+/*더 줄어들면 왼쪽 사이드 바 없애고 상단바에 로고 추가, 
+로고에 드롭다운*/
+
+@media (max-width: 958px) {
+	.leftSide {
+		display: none;
+	}
+	.topBar>img:nth-child(1), .topBar>img:nth-child(2) {
+		display: block;
+	}
+	.main {
+		left: 0px;
+		width: 94%;
+		margin-top: 15%;
+	}
+	.topBar{
+		left: 0px;
+	}
+}
+
+/*더 줄어들면 현접자 수 없애기*/
+
+@media (max-width: 850px) {
+	.topbar_screenPeopleWrap {
+		display: none;
+	}
+}
+
+/*높이, 너비 둘다 줄어들면 왼쪽 사이드 바 없애기*/
+
+@media (max-width: 600px, max-height: 750px) {
+	.leftSide {
+		display: none;
+	}
+	.topBar>img {
+		display:block;
+	}
+	.main {
+		left: 0px;
+		width: 94%;
+		margin-top: 15%;
+	}
+	.topBar{
+		left: 0px;
+	}
+}
+
+/*높이 줄어들면 왼쪽 사이드 바 메뉴리스트 없애기*/
+
+@media (max-height:600px) {
+	.menuList {
+		display: none;
+	}
+}

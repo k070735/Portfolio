@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="replace.css">
+		<title>replace</title>
+		<script type="text/javascript" src="replace.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			
+			<div class="title">Replace 공부하기!</div>
+			
+			
+			<div id="textInput">
+				<input type="text" placeholder="첫번째 문자 입력" id="firstChar">
+				<input type="button" id="inputBt" value="출력" onclick="output()">
+				<input type="text" placeholder="두번째 문자 입력" id="secondChar">
+			</div>
+			
+			
+			<div id="textOutput">
+				<div id="outputMent">결과 </div>
+				<div id="outputDiv"></div>
+				<div id="buttons">
+					<input type="button" id="reverseBt" onclick="reverser()" value="문자열 뒤집기">
+					<input type="button" id="clearBt" onclick="cleaner()" value="초기화">
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>

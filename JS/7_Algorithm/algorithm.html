@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="algorithm.css">
+		<title></title>
+		<script type="text/javascript" src="algorithm.js"></script>
+	</head>
+	<body>
+		<div class="whole">
+			
+			<!--1. 최대값 출력기-->
+			<div class="wrap wrap1">
+				
+				<div class="title">-최대값 출력기-</div>
+				<div class="cf">수를 입력해주세요.Ex) 1 2 3</div>
+				
+				<input type="text" id="input">  	<!--수 입력 칸-->
+				<br/>
+				<button onclick="output()" > 결과 보기 </button> 
+				<button onclick="clean()">초기화</button>
+				<!--결과 보기 버튼-->
+				<div id="output"></div>    	<!--결과 창-->
+			</div>
+			
+			<!--2. 최대,최소 출력기-->
+			<div class="wrap wrap3">
+				
+				<div class="title">-최대,최소값 출력기-</div>
+				
+				<div class="cf">수를 입력해주세요.Ex) 1 2 3</div>	 <!--수 입력 창-->
+				<input type="text" id="input3">
+				<br/>
+				
+				<button onclick="output3()" > 결과 보기 </button>	 <!--결과 창-->
+				<div id="output3"></div>
+			</div>
+			
+			<!--3. 성적 조작기-->
+			<div class="wrap wrap2">
+				
+				<div class="title">-성적 조작기-</div>
+				
+				<div class="cf">1.과목수를 입력해주세요.</div>
+				<input type="text" id="input1">	    <!--과목 수 입력 창-->
+				
+				<div class="cf">2.점수를 차례로 입력해주세요.<br/>Ex) 100 90 80 ... </div>
+				<input type="text" id="input2">		 <!--점수입력 창-->
+				<br/>
+				
+				<button onclick="output2()" > 결과 보기 </button>
+				<div id="output2"></div>	 <!--결과 창-->
+			</div>
+	
+			</div>
+		</div>
+	</body>
+</html>

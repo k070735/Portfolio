@@ -1,0 +1,53 @@
+/*틀*/
+.calculator {
+	width: 260px;
+	height: 300px;
+}
+
+.tile {
+	width: 60px;
+}
+
+table{
+	background: lightgray;
+	padding: 1px;
+}
+
+
+/*숫자 표기되는 곳 스타일 없애기*/
+input:focus {
+	outline: none;
+}
+
+/*숫자 칸 스타일*/
+
+td {
+	background: white;
+	text-align: center;
+	transition : all ease 0.7s;
+}
+
+#screen, #resultsc {
+	border-color: transparent;
+	text-align: right;
+}
+
+.resultbt {
+	background: coral;
+	transition: all ease 0.7s;
+}
+
+
+/*마우스 오버 시 색 전환*/
+
+td:hover { 
+	background: darkgray;
+}
+
+.resultbt:hover {
+	background: #E45129;
+}
+
+.a:hover{
+	background: white;
+}

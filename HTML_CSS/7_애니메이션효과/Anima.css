@@ -1,0 +1,90 @@
+.whole {
+    width:100%;
+    height:900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FAF6EB;
+}
+
+.rainbow {
+    width: 200px;
+    height: 200px;
+    background-color: #FA5858;
+    animation: square-to-circle 3s 1s infinite alternate;
+}
+.square {
+    width : 100px;
+    height: 100px;
+    background-color: gold;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all ease 1s;
+}
+.square:hover {
+    transform: rotate(720deg);
+}
+
+.sth {
+    width: 150px;
+    height: 150px;
+    background-color: darksalmon;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    transition: all ease 0.5s;
+}
+
+h5 {
+    text-align: center;
+    line-height: 200px;
+    font-weight: 300;
+    font-size: 30px;
+    color:snow;}
+h4 {
+    color: snow;
+    text-align: center;
+    line-height: 100px;
+    font-weight: 200;
+}
+h3{
+    color: snow;
+    text-align: center;
+    line-height: 150px;
+    font-weight: 100;
+    font-size: 20px;
+}
+.sth:hover {
+    transform: scale(0);
+}
+@keyframes square-to-circle {
+    0%{
+        border-radius: 0 0 0 0;
+        background: #FA5858;
+        transform::rotate(0deg);
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: gold;
+        transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: #C7E575;
+        transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: lightblue;
+        transform: rotate(135deg);
+    }
+    100% {
+        border-radius: 50%;
+        background: #BEA4CE;
+        transform: rotate(180deg);
+    }
+}

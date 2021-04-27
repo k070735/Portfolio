@@ -1,0 +1,31 @@
+.background {
+    height: 600px;
+	width: 1000px;
+    margin: 0;
+    background: linear-gradient(to bottom,#3C3B43, #111119);
+    overflow: hidden;
+}
+
+.rain1 {
+	width: 5px;
+    height: 130px;
+    float: left;
+    background: white;
+    animation: raindrop1 0.7s linear infinite;
+    float: left;
+}
+
+@keyframes raindrop1{
+    0%{
+        transform: translateY(0vh);
+        opacity: 0.1;
+    }
+    75%{
+        transform: translateY(60vh);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(80vh);
+        opacity: 0.2;
+    }
+}

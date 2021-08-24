@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/mypage.css" th:href="@{/src/css/myPage.css}">
+    <link rel="stylesheet" href="../css/topBar.css" th:href="@{/src/css/topBar.css}">
+    <title>Revendor</title>
+
+</head>
+
+<body>
+    <!--배경 꾸미기 용-->
+    <div class="backgroundColor"></div>
+
+    <div class="wrap">
+        <!--헤더(고정바)-->
+        <div class="headerWrap" th:replace="fragments/common :: menu('myPage')">
+
+        </div>
+
+        <!--본문-->
+        <div class="bodyWrap">
+            <div class="title">MY PAGE</div>
+            <div class="mypageWrap">
+                <div class="myProfileWrap">
+                    <div class="myProfile">
+                        <!-- <img src="../picture/profile.jpg"> -->
+                        <div class="myProfileInfo">
+                            <span>👨‍👧‍👦 </span><span>한소희</span><br><br>
+                            <span>soheeHan@naver.com</span><br><br>
+                            <!-- <span>🏠 </span><span>서울시 강남구</span><br><br><br> -->
+                            <br><br><br>
+                            <a href="/">내 정보 수정</a>
+                        </div>
+
+                        <div class="myItem">
+                            <div class="myWallet">
+                                <span>내 지갑</span>
+                                <img src="../picture/qrcode.png" th:src="@{/src/picture/qrcode.png}">
+                                <span>지갑 번호</span>
+                                <span>123ljkLKJlJGjlKJHlKUBB454u</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="myInfoWrap">
+                    <div class="myDeal">
+                        <span>내 거래</span>
+                        <div class="myDealWrap">
+                            <div class="myBuying">
+                                <img src="../picture/bill.png" th:src="@{/src/picture/bill.png}"><br>
+                                <span class="myDealText">판매내역</span><br>
+                                <span class="myDealNum">0</span>
+                            </div>
+                            <div class="mySelling">
+                                <img src="../picture/cart.png" th:src="@{/src/picture/cart.png}"><br>
+                                <span class="myDealText">구매내역</span><br>
+                                <span class="myDealNum">0</span>
+                            </div>
+                            <div class="myBasket">
+                                <img src="../picture/heart.png" th:src="@{/src/picture/heart.png}"><br>
+                                <span class="myDealText">관심상품</span><br>
+                                <span class="myDealNum">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="myBuyConfirmWrap">
+                        <span>👉내 구매 확정</span><span>구매 확정을 기다리는 물건들이 있어요!</span>
+                        <div class="myBuyConfirm">
+                            <div class="myBuyConfirmItem">
+                                <img src="../picture/metamong.png">
+                                <div class="myBuyConfirmItemText">
+                                    <span>제목 : </span><span>제목을 길게 작성해볼겁니다 어디에서 잘리나 한 번 봅시다</span><br><br>
+                                    <span>구매날짜 : </span><span>2021-08-20</span><span>판매자 : </span><span>핀테크</span>
+                                </div>
+                                <button>구매 확정</button>
+                            </div>
+                            <div class="myBuyConfirmItem">
+                                <img src="../picture/nft.jpg">
+                                <div class="myBuyConfirmItemText">
+                                    <span>제목 : </span><span>제 메타몽 사주세요...</span>
+                                    <br><br>
+                                    <span>구매날짜 : </span><span>2021-08-20</span><span>판매자 : </span><span>핀테크</span>
+                                </div>
+                                <button>구매 확정</button>
+                            </div>
+                            <div class="myBuyConfirmItem">
+                                <img src="../picture/metamong.png">
+                                <div class="myBuyConfirmItemText">
+                                    <span>제목 : </span><span>제 메타몽 사주세요...</span><br><br>
+                                    <span>구매날짜 : </span><span>2021-08-20</span><span>판매자 : </span><span>핀테크</span>
+                                </div>
+                                <button>구매 확정</button>
+                            </div>
+                        </div>
+                        <div class="moreImg"><img src="../picture/more.png" th:src="@{/src/picture/more.png}"></div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <!--하단 footer-->
+            <footer th:replace="fragments/common :: footer">
+
+            </footer>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

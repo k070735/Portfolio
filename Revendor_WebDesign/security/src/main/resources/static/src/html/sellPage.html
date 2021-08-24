@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/sellPage.css" th:href="@{/src/css/sellPage.css}">
+    <link rel="stylesheet" href="../css/topBar.css" th:href="@{/src/css/topBar.css}">
+    <title>Revendor</title>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <!--헤더(고정바)-->
+        <div class="headerWrap" th:replace="fragments/common :: menu('sellPage')">
+
+        </div>
+
+        <div class="titleWrap">
+            <div class="title">🎁 물건 등록하기 🎁</div>
+            <div class="subTitle">판매하고 싶은 물건에 대한 정보를 작성해주세요!</div>
+            <div class="subTitle">소중한 물건이 좋은 분들에게 갈 수 있게 상세하게 작성해주세요🙏</div>
+        </div>
+
+
+        <form action="a.jsp" th:action="@{/item/form}" th:object="${item}" method="POST">
+            <!--querystring 얘가 post(body)로 가면 url에 안뜸!! method 설정 안하면 header로 가서 url에 다 뜸...-->
+
+            <!-- id 값을 hidden을 이용해 설정 -->
+            <input type="hidden" th:field="*{id}">
+
+            <div class="infoWrap">
+                
+                <div class="inputBlank">
+                    <div class="labelText"><label for="picture">사진 첨부</label></div>
+                    <div class="picText"><label for="choosePic">👉사진 첨부하기 (Click)</label></div>
+                    <input id="choosePic" type="file">
+
+                    <p class="submitChange" onclick="onSubmitImage()">👉URL 변환 하기</p>
+                    <input class="submitUrl" id="imageLink" type="text" name="myphoto" th:field="*{url}"></input>
+                    <!--요거 할거면 method="post" 해주기. 원래 디폴트는 get방식이었음...-->
+                </div>
+
+                <!--제목-->
+                <div class="inputBlank">
+                    <div class="labelText"><label for="name">글 제목</label></div>
+                    <input class="infoInput" id="title" type="text" name="title" placeholder="글 제목 입력"
+                        th:field="*{title}" required><br>
+                </div>
+
+                <!--카테고리 선택-->
+                <!--수정 : 카테고리를 선택해주세요 선택 시 빠꾸...-->
+                <!-- <div class="inputBlank">
+                    <div class="labelText"><label for="category">카테고리</label></div>
+                    <div class="categorySelect">
+                        <select name="category" size="1">
+                            <option value="" selected>카테고리를 선택해주세요</option>
+                            <option value="고가물품">고가 물품</option>
+                            <option value="NFT">NFT</option>
+                        </select>
+                    </div>
+                </div> -->
+
+                <!--가격-->
+                <div class="inputBlank">
+                    <div class="labelText"><label for="name">가격</label></div>
+                    <input class="infoInput" id="price" type="number" name="price" placeholder="가격 입력"
+                        th:field="*{price}" required><br>
+                </div>
+
+                <!--지역-->
+                <div class="inputBlank">
+                    <div class="labelText"><label for="name">지역</label></div>
+                    <input class="infoInput" id="name" type="text" name="location" placeholder="지역 입력"
+                        th:field="*{location}" required><br>
+                </div>
+
+                <!--제출 버튼-->
+                <button id="upload">👉등록하기👈</button>
+            </div>
+        </form>
+    </div>
+    <!--하단 footer-->
+    <footer th:replace="fragments/common :: footer">
+
+    </footer>
+
+    <script type="text/javascript">
+        function onSubmitImage() {
+            var form = new FormData();
+            const file_name = document.getElementById("choosePic").files[0];
+            console.log(file_name);
+            form.append("image", file_name);
+
+            var settings = {
+                "url": "https://api.imgur.com/3/upload",
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                    "Authorization": "Client-ID 3c0605d41a784c3",
+                },
+                "processData": false,
+                "mimeType": "multipart/form-data",
+                "contentType": false,
+                "data": form
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log("response: " + response);
+                console.log(typeof (response));
+
+                var jsonResponse = JSON.parse(response);
+                console.log(typeof (jsonResponse));
+                console.log(jsonResponse);
+
+                console.log(jsonResponse.data);
+                console.log(typeof (jsonResponse.data));
+
+                console.log(jsonResponse.data.link);
+                console.log(typeof (jsonResponse.data.link));
+
+                $('#imageLink').val(jsonResponse.data.link);
+            });
+
+        }
+        $("#upload").click(function () {
+            var form = new FormData();
+            var settings = {
+                "url": "https://api.imgur.com/3/upload",
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                    "Authorization": "Client-ID 3c0605d41a784c3"
+                },
+                "processData": false,
+                "mimeType": "multipart/form-data",
+                "contentType": false,
+                "data": form
+            };
+
+
+            $.ajax(settings).done(function (response) {
+                console.log("response: " + response);
+                console.log(typeof (response));
+
+                var jsonResponse = JSON.parse(response);
+                console.log(typeof (jsonResponse));
+                console.log(jsonResponse);
+
+                console.log(jsonResponse.data);
+                console.log(typeof (jsonResponse.data));
+
+                console.log(jsonResponse.data.link);
+                console.log(typeof (jsonResponse.data.link));
+
+                $('#imageLink').val(jsonResponse.data.link);
+            });
+
+        });
+    </script>
+</body>
+
+</html>

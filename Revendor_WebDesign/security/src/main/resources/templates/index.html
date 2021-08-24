@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5 ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/src/css/index.css" th:href="@{/src/css/index.css}">
+    <link rel="stylesheet" href="../static/src/css/topBar.css" th:href="@{/src/css/topBar.css}">
+    <link rel="stylesheet" href="../static/src/css/itemCard.css" th:href="@{/src/css/itemCard.css}">
+    <title>Revendor</title>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <!--헤더(고정바)-->
+        <div class="headerWrap" th:replace="fragments/common :: menu('home')">
+
+        </div>
+
+        <!--본문-->
+        <div class="bodyWrap">
+
+            <!--검색창, 판매버튼, 거래성사바, 카테고리-->
+            <div class="bodyTop">
+                <!-- 검색 창 -->
+                <div class="bodyInput">
+                    <form method="GET" th:action="@{/item/list}">
+                        <div class="search">
+                            <input type="text" id="searchText" name="searchText" placeholder="찾으시는 물건이 있나요?"
+                                th:value="${param.searchText}">
+                            <button type="submit"><img class="searchImg" src="src/picture/loupe.png"
+                                    th:src="@{/src/picture/loupe.png}"></button>
+                            
+                        </div>
+                    </form>
+                    <!-- 판매 버튼 -->
+                    <div class="sellBt">
+                    <input onClick="location.href='src/html/sellPage.html'"
+                        th:onclick="'location.href=\''+ @{/item/form} + '\''" type="button" value="판매하기">
+                    </div>
+                </div>
+
+                <!-- <div class="bodyInput">
+                    <div class="search">
+                        <input type="text" placeholder="찾으시는 물건이 있나요?">
+                        <img src="src/picture/loupe.png">
+                    </div>
+                    <div class="sellBt">
+                        <input onClick="location.href='src/html/sellPage.html'" type="button" value="판매하기">
+                    </div>
+                </div> -->
+
+
+
+
+
+                <!--거래 성사 바-->
+                <div class="showBar">
+                    <ul>
+                        <li>한소희님이 서울시 강남구에서 안전한 거래 완료!(거래번호 : u7845632489845x3)</li>
+                        <li>송강님이 서울시 동작구에서 안전한 거래 완료!(거래번호 : u7845632489845x3)</li>
+                        <li>유나비님이 서울시 종로구에서 안전한 거래 완료!(거래번호 : u7845632489845x3)</li>
+                        <li>박재언님이 경기도 안산시에서 안전한 거래 완료!(거래번호 : u7845632489845x3)</li>
+                        <li>이채연님이 경기도 수원시에서 안전한 거래 완료!(거래번호 : u7845632489845x3)</li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <ul>
+                        <li><a href="src/html/buyPage.html?c=a" th:href="@{/item/list}">👉고가 물품</a></li>
+                        <li><a href="src/html/buyPage.html?c=b">👉NFT</a></li>
+                        <li><a href="">👉지역별</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!--배경 이미지-->
+        <img class="homeMain" src="src/picture/homeMain.png">
+
+        <!--추천항목-->
+        <!-- <div class="featuredList">
+                <div class="textBundle">
+                    <span>💜핀테크님을 위한 추천 항목💜</span>
+                    <span>이 상품은 어떠신가요?</span>
+                    <a href="src/html/buyPage.html">더보기👀</a>
+                </div>
+                <div class="cardBundle">
+                    <div class="itemCard">
+                        <img src="src/picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="src/picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="src/picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="src/picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="src/picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="src/picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="src/picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="src/picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+        <!--인기상품-->
+        <!-- <div class="hotList">
+                <div class="textBundle">
+                    <span>🔥인기 판매 항목🔥</span>
+                    <span>많은 고객님들이 이 물건에 관심을 갖고 계세요!</span>
+                    <a href="/src/html/buyPage.html">더보기👀</a>
+                </div>
+                <div class="cardBundle">
+                    <div class="itemCard">
+                        <img src="src/picture/nft.jpg">
+                        <div class="itemText">
+                            <div class="itemType"><span>NFT</span> / <span>그림</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="src/picture/nft.jpg">
+                        <div class="itemText">
+                            <div class="itemType"><span>NFT</span> / <span>그림</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="src/picture/nft.jpg">
+                        <div class="itemText">
+                            <div class="itemType"><span>NFT</span> / <span>그림</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="src/picture/nft.jpg">
+                        <div class="itemText">
+                            <div class="itemType"><span>NFT</span> / <span>그림</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="src/picture/nft.jpg">
+                        <div class="itemText">
+                            <div class="itemType"><span>NFT</span> / <span>그림</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="src/picture/nft.jpg">
+                        <div class="itemText">
+                            <div class="itemType"><span>NFT</span> / <span>그림</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="src/picture/nft.jpg">
+                        <div class="itemText">
+                            <div class="itemType"><span>NFT</span> / <span>그림</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="src/picture/nft.jpg">
+                        <div class="itemText">
+                            <div class="itemType"><span>NFT</span> / <span>그림</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+        <!--하단 footer-->
+        <footer th:replace="fragments/common :: footer">
+
+        </footer>
+
+    </div>
+
+    </div>
+</body>
+
+</html>
